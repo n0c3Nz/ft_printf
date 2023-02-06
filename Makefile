@@ -1,7 +1,6 @@
 CC 		= gcc
 CFLAGS 	= -Wall -Wextra -Werror -I.
-SRCS	= main.c\
-			ft_printf.c\
+SRCS	= ft_printf.c\
 			libft/ft_strlen.c\
 			libft/ft_putstr_fd.c\
 			libft/ft_putchar_fd.c\
