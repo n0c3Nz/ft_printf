@@ -1,13 +1,17 @@
 #include "libft.h"
-int	ft_putaddr_fd(unsigned long int n, int fd)
+
+int ft_putaddr_fd(unsigned long int n, int fd)
 {
-	static int	i;
-	char		*base;
-	base = "0123456789abcdef";
-	i = 0;
-	if (n >= 16)
-		ft_putaddr_fd(n / 16, fd);
-	n %= 16;
-	write (fd, &base[n], 1);
-	return (i++);
+    char *base = "0123456789abcdef";
+    int count = 0;
+
+    if (n == 0)
+    {
+        write(fd, "0", 1);
+        return (1);
+    }
+    if (n >= 16)
+        count += ft_putaddr_fd(n / 16, fd);
+    write(fd, &base[n % 16], 1);
+    return (count + 1);
 }

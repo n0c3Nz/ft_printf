@@ -1,4 +1,5 @@
 #include "ft_printf.h"
+#include <stdio.h>
 int	get_size(va_list content, char type)
 {
 	if (type == 'c')
@@ -41,3 +42,12 @@ int	ft_printf(const char *fmt, ...)
 	va_end (ap);
 	return (size);
 }
+/*
+int main(void){
+	//char *ptr;
+	int g = printf("%p, %p, %p\n",0,0,0);
+	printf("%i\n", g);
+	int a = ft_printf("%p, %p, %p\n", 0,0,0);
+	printf("%i\n",a);
+	return ft_printf("%p\n", 255);
+}*/

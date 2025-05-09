@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC 		= gcc
-CFLAGS 	= -Wall -Wextra -Werror -I.
+CFLAGS 	= -Wall -Wextra -I.
 SRCS	= ft_printf.c\
 			libft/ft_strlen.c\
 			libft/ft_putstr_fd.c\
